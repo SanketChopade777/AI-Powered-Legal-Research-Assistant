@@ -50,6 +50,14 @@ def inject_lawyer_css():
     </style>
     """, unsafe_allow_html=True)
 
+def render_back_button():
+    """Render the back button to return to home"""
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col1:
+        if st.button("← Back to Home", key="doc_back_btn", use_container_width=True):
+            if 'current_page' in st.session_state:
+                st.session_state.current_page = 'home'
+                st.rerun()
 
 # Sample lawyer data
 def get_sample_lawyers():
@@ -79,6 +87,9 @@ def main():
     # )
 
     inject_lawyer_css()
+
+    # Add back button at the top
+    render_back_button()
 
     # Sidebar with filters
     with st.sidebar:

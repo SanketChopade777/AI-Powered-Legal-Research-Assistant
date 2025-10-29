@@ -1,14 +1,11 @@
-import webbrowser
-
 import streamlit as st
-from rag_pipeline import (
-    process_user_query,
+from utils.legal_chatbot.rag_pipeline import (
     retrieve_docs,
     answer_query_with_fallback
 )
-from utils.memory_manager import get_memory_manager
+from utils.legal_chatbot.memory_manager import get_memory_manager
 from vector_database import train_on_articles, load_vector_store
-from config import PRETRAINED_DB_PATH, KNOWLEDGE_BASE_DIR
+from config import PRETRAINED_DB_PATH
 import os
 import json
 from datetime import datetime
@@ -122,6 +119,15 @@ def inject_custom_css():
     /* Remove file uploader related styles since we're removing that functionality */
     </style>
     """, unsafe_allow_html=True)
+
+def render_back_button():
+    """Render the back button to return to home"""
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col1:
+        if st.button("← Back to Home", key="doc_back_btn", use_container_width=True):
+            if 'current_page' in st.session_state:
+                st.session_state.current_page = 'home'
+                st.rerun()
 
 def initialize_pretrained_db():
     if not os.path.exists(PRETRAINED_DB_PATH):
@@ -413,6 +419,10 @@ def main():
 
     # Inject custom CSS
     inject_custom_css()
+
+    # Add back button at the top
+    render_back_button()
+
 
     # Initialize session state
     if 'pretrained_db' not in st.session_state:
