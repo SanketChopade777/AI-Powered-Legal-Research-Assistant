@@ -37,7 +37,6 @@ class DocumentAnalysisComponent:
         <style>
         /* Main background - Dark theme */
         .stApp {
-            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #ffffff;
         }
@@ -165,10 +164,11 @@ class DocumentAnalysisComponent:
 
             st.markdown("### 🔍 Processing Engine")
             st.info("""
-            **Local Processing:**
-            - Ollama + deepseek-r1:1.5b
-            - Fast local embeddings
-            - No internet required for processing
+            **Cloud-Ready Processing:**
+            - HuggingFace Sentence Transformers
+            - Fast & reliable embeddings
+            - No local dependencies required
+            - Perfect for deployment
             """)
 
             st.markdown("---")
@@ -256,7 +256,7 @@ class DocumentAnalysisComponent:
                     time.sleep(1)
 
                 # Step 3: Create vector store
-                with st.spinner("🧠 Step 3/4: Creating AI embeddings..."):
+                with st.spinner("🧠 Step 3/4: Creating embeddings with HuggingFace..."):
                     vector_store = self.processor.create_vector_store(document_text, uploaded_file.name)
                     time.sleep(1)
 
@@ -439,31 +439,41 @@ class DocumentAnalysisComponent:
                         </div>
                         """, unsafe_allow_html=True)
 
-        # --- INPUT AREA ---
-        st.text_area(
-            "Type your question here:",
-            placeholder="Ask anything about your document...",
-            key="question_input",
-            height=100,
-            label_visibility="collapsed"
-        )
+        # Question input with form for auto-clear
+        with st.form(key="qa_form", clear_on_submit=True):
+            question = st.text_area(
+                "Type your question here:",
+                placeholder="Ask anything about your document...",
+                key="question_input",
+                height=100,
+                label_visibility="collapsed"
+            )
 
-        # --- DEFINE ASK CALLBACK ---
-        def on_ask_click():
-            question = st.session_state.question_input.strip()
+            col1, col2 = st.columns([1, 1])
 
-            if not question:
-                st.warning("Please enter a question first.")
-                return
+            with col1:
+                submit_question = st.form_submit_button(
+                    "🔍 Ask Question",
+                    use_container_width=True,
+                    type="primary"
+                )
 
-            # Add user question to chat
-            st.session_state.chat_history.append({
-                'role': 'user',
-                'content': question,
-                'timestamp': datetime.now().strftime("%H:%M:%S")
-            })
+            with col2:
+                submit_clear = st.form_submit_button(
+                    "🗑️ Clear Chat",
+                    use_container_width=True
+                )
 
+        # Handle form submissions
+        if submit_question and question.strip():
             with st.spinner("🤔 Searching document for answers..."):
+                # Add user question to chat
+                st.session_state.chat_history.append({
+                    'role': 'user',
+                    'content': question,
+                    'timestamp': datetime.now().strftime("%H:%M:%S")
+                })
+
                 try:
                     answer = self.rag_analyzer.answer_question(
                         st.session_state.document_text,
@@ -486,58 +496,12 @@ class DocumentAnalysisComponent:
                         'timestamp': datetime.now().strftime("%H:%M:%S")
                     })
 
-            # ✅ Clear the text box after asking
-            st.session_state.question_input = ""
+            # Form will auto-clear due to clear_on_submit=True
+            st.rerun()
 
-        # --- BUTTONS ---
-        col1, col2 = st.columns([1, 1])
-
-        with col1:
-            st.button("🔍 Ask Question", use_container_width=True, on_click=on_ask_click)
-
-        with col2:
-            clear_clicked = st.button("🗑️ Clear Chat", use_container_width=True)
-            if clear_clicked:
-                st.session_state.chat_history = []
-                st.session_state.question_input = ""
-                st.experimental_rerun()
-
-    # def answer_question(self, question):
-    #     """Answer user question about the document"""
-    #     # Add user question to chat history
-    #     st.session_state.chat_history.append({
-    #         'role': 'user',
-    #         'content': question,
-    #         'timestamp': datetime.now().strftime("%H:%M:%S")
-    #     })
-    #
-    #     with st.spinner("🤔 Searching document..."):
-    #         try:
-    #             answer = self.rag_analyzer.answer_question(
-    #                 st.session_state.document_text,
-    #                 question,
-    #                 st.session_state.uploaded_file_name
-    #             )
-    #
-    #             # Add assistant answer to chat history
-    #             st.session_state.chat_history.append({
-    #                 'role': 'assistant',
-    #                 'content': answer,
-    #                 'timestamp': datetime.now().strftime("%H:%M:%S")
-    #             })
-    #
-    #
-    #             st.rerun()
-    #
-    #         except Exception as e:
-    #             error_msg = f"❌ Error answering question: {str(e)}"
-    #             st.session_state.chat_history.append({
-    #                 'role': 'assistant',
-    #                 'content': error_msg,
-    #                 'timestamp': datetime.now().strftime("%H:%M:%S")
-    #             })
-    #
-    #             st.rerun()
+        elif submit_clear:
+            st.session_state.chat_history = []
+            st.rerun()
 
     def main(self):
         """Main function to run the document analysis component"""

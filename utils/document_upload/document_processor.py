@@ -7,6 +7,7 @@ import streamlit as st
 from utils.legal_chatbot.document_preprocessor import load_document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
+from langchain_huggingface import HuggingFaceEmbeddings
 import time
 
 
@@ -18,22 +19,28 @@ class DocumentProcessor:
         os.makedirs(self.user_uploads_dir, exist_ok=True)
 
     def _get_embeddings(self):
-        """Get embeddings using Ollama with deepseek-r1"""
+        """Get embeddings using HuggingFace for better deployment"""
         try:
-            from langchain_ollama import OllamaEmbeddings
-            # Use deepseek-r1:1.5b for local embeddings (lightweight)
-            return OllamaEmbeddings(model="deepseek-r1:1.5b")
+            # Use a lightweight, fast model for embeddings
+            embeddings = HuggingFaceEmbeddings(
+                model_name="sentence-transformers/all-MiniLM-L6-v2",
+                model_kwargs={'device': 'cpu'},  # Use CPU for compatibility
+                encode_kwargs={'normalize_embeddings': True}
+            )
+            # st.success("✅ HuggingFace embeddings initialized successfully")
+            return embeddings
         except Exception as e:
-            st.warning(f"⚠️ Ollama not available: {e}. Using fallback embeddings.")
-            # Fallback to a lightweight HuggingFace model
+            st.error(f"❌ HuggingFace embeddings failed: {e}")
+            # Ultimate fallback - try a different model
             try:
-                from langchain_huggingface import HuggingFaceEmbeddings
-                return HuggingFaceEmbeddings(
-                    model_name="sentence-transformers/all-MiniLM-L6-v2",
+                embeddings = HuggingFaceEmbeddings(
+                    model_name="sentence-transformers/paraphrase-MiniLM-L3-v2",
                     model_kwargs={'device': 'cpu'}
                 )
+                st.info("✅ Fallback HuggingFace embeddings initialized")
+                return embeddings
             except Exception as e2:
-                st.error(f"❌ HuggingFace also failed: {e2}")
+                st.error(f"❌ All embedding models failed: {e2}")
                 raise Exception("No embedding model available")
 
     def extract_text(self, uploaded_file) -> str:
@@ -66,7 +73,7 @@ class DocumentProcessor:
             raise Exception(f"Error processing document: {str(e)}")
 
     def create_vector_store(self, text: str, document_name: str):
-        """Create vector store from document text using Ollama embeddings"""
+        """Create vector store from document text using HuggingFace embeddings"""
         try:
             from langchain.schema import Document
 
@@ -75,10 +82,10 @@ class DocumentProcessor:
                 # Create document chunks
                 documents = [Document(page_content=text, metadata={"source": document_name})]
 
-                # Split into chunks - smaller chunks for better performance
+                # Split into chunks optimized for HuggingFace
                 text_splitter = RecursiveCharacterTextSplitter(
-                    chunk_size=800,  # Smaller chunks for local processing
-                    chunk_overlap=100,
+                    chunk_size=1000,  # Slightly larger chunks for better context
+                    chunk_overlap=150,
                     add_start_index=True
                 )
                 chunks = text_splitter.split_documents(documents)
@@ -87,8 +94,8 @@ class DocumentProcessor:
                 time.sleep(1)  # Let user see the message
 
             # Show embedding creation progress
-            with st.spinner("🧠 Creating embeddings (this may take a moment)..."):
-                # Create vector store with Ollama embeddings
+            with st.spinner("🧠 Creating embeddings with HuggingFace..."):
+                # Create vector store with HuggingFace embeddings
                 vector_store = FAISS.from_documents(chunks, self.embeddings)
                 st.success("✅ Vector embeddings created successfully")
                 time.sleep(1)
@@ -110,10 +117,9 @@ class DocumentProcessor:
             with open(text_path, 'w', encoding='utf-8') as f:
                 f.write(text)
 
-            # Save vector store
-            vector_path = f"{base_path}_vectors.pkl"
-            with open(vector_path, 'wb') as f:
-                pickle.dump(vector_store, f)
+            # Save vector store (FAISS index)
+            vector_path = f"{base_path}_faiss_index"
+            vector_store.save_local(vector_path)
 
             # Save analysis
             analysis_path = f"{base_path}_analysis.pkl"
@@ -139,7 +145,7 @@ class DocumentProcessor:
 
             # Check if files exist
             text_path = f"{base_path}_text.txt"
-            vector_path = f"{base_path}_vectors.pkl"
+            vector_path = f"{base_path}_faiss_index"
             analysis_path = f"{base_path}_analysis.pkl"
 
             if not all(os.path.exists(p) for p in [text_path, vector_path, analysis_path]):
@@ -149,8 +155,8 @@ class DocumentProcessor:
             with open(text_path, 'r', encoding='utf-8') as f:
                 text = f.read()
 
-            with open(vector_path, 'rb') as f:
-                vector_store = pickle.load(f)
+            # Load FAISS index
+            vector_store = FAISS.load_local(vector_path, self.embeddings, allow_dangerous_deserialization=True)
 
             with open(analysis_path, 'rb') as f:
                 analysis = pickle.load(f)
@@ -163,6 +169,7 @@ class DocumentProcessor:
             }
 
         except Exception as e:
+            st.warning(f"⚠️ Could not load processed data: {e}")
             return None
 
     def analyze_document_structure(self, text: str) -> Dict:
@@ -215,21 +222,21 @@ class DocumentProcessor:
         char_count = len(text)
 
         summary = f"""
-    🎉 **Document Processing Complete!**
+🎉 **Document Processing Complete!**
 
-    📊 **Document Overview:**
-    - **Words:** {word_count:,} 
-    - **Characters:** {char_count:,}
-    - **Estimated Pages:** {max(1, word_count // 250)}
-    - **Paragraphs:** {len(paragraphs)}
+📊 **Document Overview:**
+- **Words:** {word_count:,} 
+- **Characters:** {char_count:,}
+- **Estimated Pages:** {max(1, word_count // 250)}
+- **Paragraphs:** {len(paragraphs)}
 
-    📝 **Content Preview:**
-    {preview[:500]}{'...' if len(preview) > 500 else ''}
+📝 **Content Preview:**
+{preview[:500]}{'...' if len(preview) > 500 else ''}
 
-    🚀 **Ready for Analysis!** You can now:
-    1. **Ask Questions** about specific content in the Q&A section below
-    2. **Run AI Analysis** for detailed insights using the options above
+🚀 **Ready for Analysis!** You can now:
+1. **Ask Questions** about specific content in the Q&A section below
+2. **Run AI Analysis** for detailed insights using the options above
 
-    💡 **Tip:** Use the Q&A section below to ask specific questions about your document.
-    """
+💡 **Tip:** Use the Q&A section below to ask specific questions about your document.
+"""
         return summary
