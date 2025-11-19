@@ -92,27 +92,28 @@ class DocumentAnalysisComponent:
             border: 2px solid #4cc9f0;
         }
 
-        /* Chat messages */
+       /* User message - Deep Royal Blue & Purple */
         .user-message {
-            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
-            color: white;
+            background: linear-gradient(135deg, #182c61 0%, #301934 100%); /* Deep Royal Blue to Dark Plum */
+            color: white; /* High contrast text */
             padding: 15px 20px;
             border-radius: 18px 18px 5px 18px;
             margin: 10px 0;
             max-width: 80%;
             margin-left: auto;
-            border: 1px solid rgba(67, 97, 238, 0.3);
+            border: 1px solid rgba(24, 44, 97, 0.4); /* Border color based on the start color */
         }
-
+        
+        /* Assistant message - Deep Forest Green & Teal */
         .assistant-message {
-            background: linear-gradient(135deg, #2ec4b6 0%, #0a9396 100%);
-            color: white;
+            background: linear-gradient(135deg, #004d40 0%, #00796b 100%); /* Deep Forest Green to Rich Teal */
+            color: white; /* High contrast text */
             padding: 15px 20px;
             border-radius: 18px 18px 18px 5px;
             margin: 10px 0;
             max-width: 80%;
             margin-right: auto;
-            border: 1px solid rgba(46, 196, 182, 0.3);
+            border: 1px solid rgba(0, 77, 64, 0.4); /* Border color based on the start color */
         }
 
         /* Status indicators */

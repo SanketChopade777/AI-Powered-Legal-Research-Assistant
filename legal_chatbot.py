@@ -54,20 +54,20 @@ def inject_custom_css():
         border: none !important;
     }
 
-    /* User message */
+    /* User message (Odd) - Darker, contrasting color */
     .stChatMessage[data-testid="stChatMessage"]:nth-child(odd) {
-        background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%) !important;
+        background: linear-gradient(135deg, #1f286b 0%, #151e3f 100%) !important; /* Deep Indigo to Dark Navy */
         color: white !important;
         border: none;
     }
-
-    /* Assistant message */
+    
+    /* Assistant message (Even) - Lighter, professional color */
     .stChatMessage[data-testid="stChatMessage"]:nth-child(even) {
-        background: linear-gradient(135deg, #2ec4b6 0%, #0a9396 100%) !important;
+        background: linear-gradient(135deg, #4f7cac 0%, #3e6080 100%) !important; /* Slate Blue to Gray-Blue */
         color: white !important;
         border: none;
     }
-
+    
     /* Chat message content */
     .stChatMessageContent {
         padding: 20px !important;
@@ -103,7 +103,7 @@ def inject_custom_css():
         border-radius: 25px;
         border: 2px solid #4cc9f0;
         padding: 15px 20px;
-        font-size: 16px;
+        font-size: 18px;
         background: rgba(26, 26, 46, 0.8);
         color: white;
     }
@@ -458,7 +458,7 @@ def main():
                 "container": {"padding": "0", "background-color": "transparent"},
                 "icon": {"color": "white", "font-size": "20px"},
                 "nav-link": {
-                    "font-size": "16px",
+                    "font-size": "18px",
                     "text-align": "left",
                     "margin": "5px 0",
                     "border-radius": "15px",
