@@ -252,6 +252,8 @@ I couldn't find specific information about "{query_str}" in my current legal kno
 **My expertise covers:**
 • **Labour Laws**: Employment rights, wages, workplace regulations, disputes
 • **Marriage Laws**: Hindu Marriage Act, Special Marriage Act, marriage procedures
+• **Cyber/Fraud Laws**: Information Technology Act,  Digital Personal Data Protection Act
+• **Consumer Laws**: Consumer Protection Act, E-commerce Rules
 
 **For comprehensive legal guidance:**
 1. Consult the specific legal statutes directly
@@ -283,7 +285,7 @@ def answer_query_with_fallback(documents, query, memory_manager=None):
 def get_enhanced_prompt():
     """Enhanced prompt for legal responses with token optimization"""
     template = """
-You are an expert AI legal assistant specializing in Indian Labour Laws and Marriage Laws.
+You are an expert AI legal assistant specializing in Indian Labour Laws, Marriage Laws, Employee Laws and Cyber/Fraud Laws.
 
 CONTEXT FROM LEGAL DOCUMENTS:
 {context}
@@ -329,7 +331,7 @@ I'm currently experiencing technical difficulties.
 - Try with a smaller document
 - Wait a moment and try again
 
-*My expertise includes Labour Laws and Marriage Laws in India.*"""
+*My expertise includes Labour Laws, Marriage Laws, Employee Laws and Cyber/Fraud Laws in India.*"""
 
 
 def test_rag_pipeline():

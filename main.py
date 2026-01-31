@@ -54,7 +54,7 @@ def show_fallback_interface(module_name):
 
 def main():
     st.set_page_config(
-        page_title="LegalEase AI - Navigation",
+        page_title="AI Legal Assistant - Navigation",
         layout="wide",
         page_icon="⚖️",
         initial_sidebar_state="collapsed"

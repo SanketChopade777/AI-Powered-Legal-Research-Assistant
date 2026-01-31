@@ -1,0 +1,101 @@
+sr_no,district,dlsa_tlsc,name,qualification,phone,email,empanelled_on,empanelment_expiring,gender,experience_years,specialization,hourly_rate_inr,rating,languages,address,court_practice
+1,Mumbai,DLSA,Adv. Rajesh Sharma,LL.B,9111111111,advocate0@gmail.com,01 April 2023,31 March 2026,Male,5,Criminal Law,2000,4.2,"Marathi, Hindi, English","Mumbai, Maharashtra",District Court
+2,Pune,DLSA,Adv. Priya Patel,B.A.LL.B,9111111111,advocate1@gmail.com,01 April 2023,31 March 2026,Female,8,Civil Law,3000,4.5,"Hindi, English","Pune, Maharashtra",High Court
+3,Nagpur,DLSA,Adv. Amit Kumar,B.Com LL.B,9111111111,advocate2@gmail.com,01 April 2023,31 March 2026,Male,12,Family Law,2500,4.8,"Marathi, Hindi","Nagpur, Maharashtra",Session Court
+4,Thane,DLSA,Adv. Sneha Desai,LL.M,9111111111,advocate3@gmail.com,01 April 2023,31 March 2026,Female,3,Corporate Law,4000,3.9,"English, Hindi","Thane, Maharashtra",Consumer Court
+5,Nashik,DLSA,Adv. Rohan Verma,B.S.L.LL.B,9111111111,advocate4@gmail.com,01 April 2023,31 March 2026,Male,15,Property Law,1500,4.7,"Marathi, English","Nashik, Maharashtra",Family Court
+6,Mumbai,DLSA,Adv. Anjali Singh,LL.B,9111111111,advocate5@gmail.com,01 April 2023,31 March 2026,Female,7,Labour Law,3500,4.1,Hindi,"Aurangabad, Maharashtra",Labour Court
+7,Pune,DLSA,Adv. Vikram Mehta,B.A.LL.B,9111111111,advocate6@gmail.com,01 April 2023,31 March 2026,Male,10,Tax Law,1800,4.9,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",District Court
+8,Nagpur,DLSA,Adv. Neha Joshi,B.Com LL.B,9111111111,advocate7@gmail.com,01 April 2023,31 March 2026,Female,6,Cyber Law,2800,4.3,English,"Amravati, Maharashtra",High Court
+9,Thane,DLSA,Adv. Sanjay Gupta,LL.M,9111111111,advocate8@gmail.com,01 April 2023,31 March 2026,Male,9,Intellectual Property,3200,4.6,"Marathi, Hindi, English","Kolhapur, Maharashtra",Session Court
+10,Nashik,DLSA,Adv. Pooja Reddy,B.S.L.LL.B,9111111111,advocate9@gmail.com,01 April 2023,31 March 2026,Female,4,Constitutional Law,2200,4.0,"Hindi, English","Sangli, Maharashtra",Consumer Court
+11,Mumbai,DLSA,Adv. Rahul Sharma,LL.B,9111111111,advocate10@gmail.com,01 April 2023,31 March 2026,Male,6,Criminal Law,2100,4.3,"Marathi, Hindi, English","Mumbai, Maharashtra",Family Court
+12,Pune,DLSA,Adv. Meera Patel,B.A.LL.B,9111111111,advocate11@gmail.com,01 April 2023,31 March 2026,Female,9,Civil Law,3100,4.6,"Hindi, English","Pune, Maharashtra",Labour Court
+13,Nagpur,DLSA,Adv. Arjun Kumar,B.Com LL.B,9111111111,advocate12@gmail.com,01 April 2023,31 March 2026,Male,13,Family Law,2600,4.9,"Marathi, Hindi","Nagpur, Maharashtra",District Court
+14,Thane,DLSA,Adv. Tanvi Desai,LL.M,9111111111,advocate13@gmail.com,01 April 2023,31 March 2026,Female,4,Corporate Law,4100,4.0,"English, Hindi","Thane, Maharashtra",High Court
+15,Nashik,DLSA,Adv. Varun Verma,B.S.L.LL.B,9111111111,advocate14@gmail.com,01 April 2023,31 March 2026,Male,16,Property Law,1600,4.8,"Marathi, English","Nashik, Maharashtra",Session Court
+16,Mumbai,DLSA,Adv. Kavita Singh,LL.B,9111111111,advocate15@gmail.com,01 April 2023,31 March 2026,Female,8,Labour Law,3600,4.2,Hindi,"Aurangabad, Maharashtra",Consumer Court
+17,Pune,DLSA,Adv. Ravi Mehta,B.A.LL.B,9111111111,advocate16@gmail.com,01 April 2023,31 March 2026,Male,11,Tax Law,1900,4.8,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",Family Court
+18,Nagpur,DLSA,Adv. Ananya Joshi,B.Com LL.B,9111111111,advocate17@gmail.com,01 April 2023,31 March 2026,Female,7,Cyber Law,2900,4.4,English,"Amravati, Maharashtra",Labour Court
+19,Thane,DLSA,Adv. Karan Gupta,LL.M,9111111111,advocate18@gmail.com,01 April 2023,31 March 2026,Male,10,Intellectual Property,3300,4.7,"Marathi, Hindi, English","Kolhapur, Maharashtra",District Court
+20,Nashik,DLSA,Adv. Shreya Reddy,B.S.L.LL.B,9111111111,advocate19@gmail.com,01 April 2023,31 March 2026,Female,5,Constitutional Law,2300,4.1,"Hindi, English","Sangli, Maharashtra",High Court
+21,Mumbai,DLSA,Adv. Sunil Sharma,LL.B,9111111111,advocate20@gmail.com,01 April 2023,31 March 2026,Male,7,Criminal Law,2200,4.4,"Marathi, Hindi, English","Mumbai, Maharashtra",Session Court
+22,Pune,DLSA,Adv. Nisha Patel,B.A.LL.B,9111111111,advocate21@gmail.com,01 April 2023,31 March 2026,Female,10,Civil Law,3200,4.7,"Hindi, English","Pune, Maharashtra",Consumer Court
+23,Nagpur,DLSA,Adv. Rohit Kumar,B.Com LL.B,9111111111,advocate22@gmail.com,01 April 2023,31 March 2026,Male,14,Family Law,2700,4.6,"Marathi, Hindi","Nagpur, Maharashtra",Family Court
+24,Thane,DLSA,Adv. Riya Desai,LL.M,9111111111,advocate23@gmail.com,01 April 2023,31 March 2026,Female,5,Corporate Law,4200,4.1,"English, Hindi","Thane, Maharashtra",Labour Court
+25,Nashik,DLSA,Adv. Ajay Verma,B.S.L.LL.B,9111111111,advocate24@gmail.com,01 April 2023,31 March 2026,Male,17,Property Law,1700,4.9,"Marathi, English","Nashik, Maharashtra",District Court
+26,Mumbai,DLSA,Adv. Manisha Singh,LL.B,9111111111,advocate25@gmail.com,01 April 2023,31 March 2026,Female,9,Labour Law,3700,4.3,Hindi,"Aurangabad, Maharashtra",High Court
+27,Pune,DLSA,Adv. Suresh Mehta,B.A.LL.B,9111111111,advocate26@gmail.com,01 April 2023,31 March 2026,Male,12,Tax Law,2000,4.7,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",Session Court
+28,Nagpur,DLSA,Adv. Priyanka Joshi,B.Com LL.B,9111111111,advocate27@gmail.com,01 April 2023,31 March 2026,Female,8,Cyber Law,3000,4.5,English,"Amravati, Maharashtra",Consumer Court
+29,Thane,DLSA,Adv. Mohan Gupta,LL.M,9111111111,advocate28@gmail.com,01 April 2023,31 March 2026,Male,11,Intellectual Property,3400,4.8,"Marathi, Hindi, English","Kolhapur, Maharashtra",Family Court
+30,Nashik,DLSA,Adv. Anjali Reddy,B.S.L.LL.B,9111111111,advocate29@gmail.com,01 April 2023,31 March 2026,Female,6,Constitutional Law,2400,4.2,"Hindi, English","Sangli, Maharashtra",Labour Court
+31,Mumbai,DLSA,Adv. Deepak Sharma,LL.B,9111111111,advocate30@gmail.com,01 April 2023,31 March 2026,Male,8,Criminal Law,2300,4.5,"Marathi, Hindi, English","Mumbai, Maharashtra",District Court
+32,Pune,DLSA,Adv. Sheetal Patel,B.A.LL.B,9111111111,advocate31@gmail.com,01 April 2023,31 March 2026,Female,11,Civil Law,3300,4.8,"Hindi, English","Pune, Maharashtra",High Court
+33,Nagpur,DLSA,Adv. Naveen Kumar,B.Com LL.B,9111111111,advocate32@gmail.com,01 April 2023,31 March 2026,Male,15,Family Law,2800,4.7,"Marathi, Hindi","Nagpur, Maharashtra",Session Court
+34,Thane,DLSA,Adv. Aarti Desai,LL.M,9111111111,advocate33@gmail.com,01 April 2023,31 March 2026,Female,6,Corporate Law,4300,4.2,"English, Hindi","Thane, Maharashtra",Consumer Court
+35,Nashik,DLSA,Adv. Sameer Verma,B.S.L.LL.B,9111111111,advocate34@gmail.com,01 April 2023,31 March 2026,Male,18,Property Law,1800,4.6,"Marathi, English","Nashik, Maharashtra",Family Court
+36,Mumbai,DLSA,Adv. Radha Singh,LL.B,9111111111,advocate35@gmail.com,01 April 2023,31 March 2026,Female,10,Labour Law,3800,4.4,Hindi,"Aurangabad, Maharashtra",Labour Court
+37,Pune,DLSA,Adv. Alok Mehta,B.A.LL.B,9111111111,advocate36@gmail.com,01 April 2023,31 March 2026,Male,13,Tax Law,2100,4.9,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",District Court
+38,Nagpur,DLSA,Adv. Smita Joshi,B.Com LL.B,9111111111,advocate37@gmail.com,01 April 2023,31 March 2026,Female,9,Cyber Law,3100,4.6,English,"Amravati, Maharashtra",High Court
+39,Thane,DLSA,Adv. Vivek Gupta,LL.M,9111111111,advocate38@gmail.com,01 April 2023,31 March 2026,Male,12,Intellectual Property,3500,4.9,"Marathi, Hindi, English","Kolhapur, Maharashtra",Session Court
+40,Nashik,DLSA,Adv. Divya Reddy,B.S.L.LL.B,9111111111,advocate39@gmail.com,01 April 2023,31 March 2026,Female,7,Constitutional Law,2500,4.3,"Hindi, English","Sangli, Maharashtra",Consumer Court
+41,Mumbai,DLSA,Adv. Vinod Sharma,LL.B,9111111111,advocate40@gmail.com,01 April 2023,31 March 2026,Male,9,Criminal Law,2400,4.6,"Marathi, Hindi, English","Mumbai, Maharashtra",Family Court
+42,Pune,DLSA,Adv. Kiran Patel,B.A.LL.B,9111111111,advocate41@gmail.com,01 April 2023,31 March 2026,Female,12,Civil Law,3400,4.9,"Hindi, English","Pune, Maharashtra",Labour Court
+43,Nagpur,DLSA,Adv. Pankaj Kumar,B.Com LL.B,9111111111,advocate42@gmail.com,01 April 2023,31 March 2026,Male,16,Family Law,2900,4.8,"Marathi, Hindi","Nagpur, Maharashtra",District Court
+44,Thane,DLSA,Adv. Neha Desai,LL.M,9111111111,advocate43@gmail.com,01 April 2023,31 March 2026,Female,7,Corporate Law,4400,4.3,"English, Hindi","Thane, Maharashtra",High Court
+45,Nashik,DLSA,Adv. Raj Verma,B.S.L.LL.B,9111111111,advocate44@gmail.com,01 April 2023,31 March 2026,Male,19,Property Law,1900,4.7,"Marathi, English","Nashik, Maharashtra",Session Court
+46,Mumbai,DLSA,Adv. Swati Singh,LL.B,9111111111,advocate45@gmail.com,01 April 2023,31 March 2026,Female,11,Labour Law,3900,4.5,Hindi,"Aurangabad, Maharashtra",Consumer Court
+47,Pune,DLSA,Adv. Manoj Mehta,B.A.LL.B,9111111111,advocate46@gmail.com,01 April 2023,31 March 2026,Male,14,Tax Law,2200,4.6,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",Family Court
+48,Nagpur,DLSA,Adv. Pooja Joshi,B.Com LL.B,9111111111,advocate47@gmail.com,01 April 2023,31 March 2026,Female,10,Cyber Law,3200,4.7,English,"Amravati, Maharashtra",Labour Court
+49,Thane,DLSA,Adv. Rakesh Gupta,LL.M,9111111111,advocate48@gmail.com,01 April 2023,31 March 2026,Male,13,Intellectual Property,3600,4.5,"Marathi, Hindi, English","Kolhapur, Maharashtra",District Court
+50,Nashik,DLSA,Adv. Sneha Reddy,B.S.L.LL.B,9111111111,advocate49@gmail.com,01 April 2023,31 March 2026,Female,8,Constitutional Law,2600,4.4,"Hindi, English","Sangli, Maharashtra",High Court
+51,Mumbai,TLSC,Adv. Rohan Sharma,LL.B,9111111111,advocate50@gmail.com,01 April 2023,31 March 2026,Male,10,Criminal Law,2500,4.7,"Marathi, Hindi, English","Mumbai, Maharashtra",Session Court
+52,Pune,TLSC,Adv. Tina Patel,B.A.LL.B,9111111111,advocate51@gmail.com,01 April 2023,31 March 2026,Female,13,Civil Law,3500,4.5,"Hindi, English","Pune, Maharashtra",Consumer Court
+53,Nagpur,TLSC,Adv. Manish Kumar,B.Com LL.B,9111111111,advocate52@gmail.com,01 April 2023,31 March 2026,Male,17,Family Law,3000,4.9,"Marathi, Hindi","Nagpur, Maharashtra",Family Court
+54,Thane,TLSC,Adv. Maya Desai,LL.M,9111111111,advocate53@gmail.com,01 April 2023,31 March 2026,Female,8,Corporate Law,4500,4.4,"English, Hindi","Thane, Maharashtra",Labour Court
+55,Nashik,TLSC,Adv. Ashok Verma,B.S.L.LL.B,9111111111,advocate54@gmail.com,01 April 2023,31 March 2026,Male,20,Property Law,2000,4.8,"Marathi, English","Nashik, Maharashtra",District Court
+56,Mumbai,TLSC,Adv. Geeta Singh,LL.B,9111111111,advocate55@gmail.com,01 April 2023,31 March 2026,Female,12,Labour Law,4000,4.6,Hindi,"Aurangabad, Maharashtra",High Court
+57,Pune,TLSC,Adv. Nitin Mehta,B.A.LL.B,9111111111,advocate56@gmail.com,01 April 2023,31 March 2026,Male,15,Tax Law,2300,4.8,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",Session Court
+58,Nagpur,TLSC,Adv. Ritu Joshi,B.Com LL.B,9111111111,advocate57@gmail.com,01 April 2023,31 March 2026,Female,11,Cyber Law,3300,4.8,English,"Amravati, Maharashtra",Consumer Court
+59,Thane,TLSC,Adv. Anil Gupta,LL.M,9111111111,advocate58@gmail.com,01 April 2023,31 March 2026,Male,14,Intellectual Property,3700,4.7,"Marathi, Hindi, English","Kolhapur, Maharashtra",Family Court
+60,Nashik,TLSC,Adv. Meenal Reddy,B.S.L.LL.B,9111111111,advocate59@gmail.com,01 April 2023,31 March 2026,Female,9,Constitutional Law,2700,4.5,"Hindi, English","Sangli, Maharashtra",Labour Court
+61,Mumbai,TLSC,Adv. Sagar Sharma,LL.B,9111111111,advocate60@gmail.com,01 April 2023,31 March 2026,Male,11,Criminal Law,2600,4.8,"Marathi, Hindi, English","Mumbai, Maharashtra",District Court
+62,Pune,TLSC,Adv. Reena Patel,B.A.LL.B,9111111111,advocate61@gmail.com,01 April 2023,31 March 2026,Female,14,Civil Law,3600,4.7,"Hindi, English","Pune, Maharashtra",High Court
+63,Nagpur,TLSC,Adv. Vijay Kumar,B.Com LL.B,9111111111,advocate62@gmail.com,01 April 2023,31 March 2026,Male,18,Family Law,3100,4.5,"Marathi, Hindi","Nagpur, Maharashtra",Session Court
+64,Thane,TLSC,Adv. Shalini Desai,LL.M,9111111111,advocate63@gmail.com,01 April 2023,31 March 2026,Female,9,Corporate Law,4600,4.5,"English, Hindi","Thane, Maharashtra",Consumer Court
+65,Nashik,TLSC,Adv. Dinesh Verma,B.S.L.LL.B,9111111111,advocate64@gmail.com,01 April 2023,31 March 2026,Male,21,Property Law,2100,4.9,"Marathi, English","Nashik, Maharashtra",Family Court
+66,Mumbai,TLSC,Adv. Madhu Singh,LL.B,9111111111,advocate65@gmail.com,01 April 2023,31 March 2026,Female,13,Labour Law,4100,4.7,Hindi,"Aurangabad, Maharashtra",Labour Court
+67,Pune,TLSC,Adv. Prakash Mehta,B.A.LL.B,9111111111,advocate66@gmail.com,01 April 2023,31 March 2026,Male,16,Tax Law,2400,4.9,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",District Court
+68,Nagpur,TLSC,Adv. Shweta Joshi,B.Com LL.B,9111111111,advocate67@gmail.com,01 April 2023,31 March 2026,Female,12,Cyber Law,3400,4.9,English,"Amravati, Maharashtra",High Court
+69,Thane,TLSC,Adv. Rajeev Gupta,LL.M,9111111111,advocate68@gmail.com,01 April 2023,31 March 2026,Male,15,Intellectual Property,3800,4.8,"Marathi, Hindi, English","Kolhapur, Maharashtra",Session Court
+70,Nashik,TLSC,Adv. Kavya Reddy,B.S.L.LL.B,9111111111,advocate69@gmail.com,01 April 2023,31 March 2026,Female,10,Constitutional Law,2800,4.6,"Hindi, English","Sangli, Maharashtra",Consumer Court
+71,Mumbai,TLSC,Adv. Mukesh Sharma,LL.B,9111111111,advocate70@gmail.com,01 April 2023,31 March 2026,Male,12,Criminal Law,2700,4.9,"Marathi, Hindi, English","Mumbai, Maharashtra",Family Court
+72,Pune,TLSC,Adv. Asha Patel,B.A.LL.B,9111111111,advocate71@gmail.com,01 April 2023,31 March 2026,Female,15,Civil Law,3700,4.8,"Hindi, English","Pune, Maharashtra",Labour Court
+73,Nagpur,TLSC,Adv. Suresh Kumar,B.Com LL.B,9111111111,advocate72@gmail.com,01 April 2023,31 March 2026,Male,19,Family Law,3200,4.6,"Marathi, Hindi","Nagpur, Maharashtra",District Court
+74,Thane,TLSC,Adv. Poonam Desai,LL.M,9111111111,advocate73@gmail.com,01 April 2023,31 March 2026,Female,10,Corporate Law,4700,4.6,"English, Hindi","Thane, Maharashtra",High Court
+75,Nashik,TLSC,Adv. Mahesh Verma,B.S.L.LL.B,9111111111,advocate74@gmail.com,01 April 2023,31 March 2026,Male,22,Property Law,2200,4.5,"Marathi, English","Nashik, Maharashtra",Session Court
+76,Mumbai,TLSC,Adv. Sunita Singh,LL.B,9111111111,advocate75@gmail.com,01 April 2023,31 March 2026,Female,14,Labour Law,4200,4.8,Hindi,"Aurangabad, Maharashtra",Consumer Court
+77,Pune,TLSC,Adv. Harsh Mehta,B.A.LL.B,9111111111,advocate76@gmail.com,01 April 2023,31 March 2026,Male,17,Tax Law,2500,4.7,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",Family Court
+78,Nagpur,TLSC,Adv. Nidhi Joshi,B.Com LL.B,9111111111,advocate77@gmail.com,01 April 2023,31 March 2026,Female,13,Cyber Law,3500,4.5,English,"Amravati, Maharashtra",Labour Court
+79,Thane,TLSC,Adv. Sunil Gupta,LL.M,9111111111,advocate78@gmail.com,01 April 2023,31 March 2026,Male,16,Intellectual Property,3900,4.9,"Marathi, Hindi, English","Kolhapur, Maharashtra",District Court
+80,Nashik,TLSC,Adv. Ritu Reddy,B.S.L.LL.B,9111111111,advocate79@gmail.com,01 April 2023,31 March 2026,Female,11,Constitutional Law,2900,4.7,"Hindi, English","Sangli, Maharashtra",High Court
+81,Mumbai,TLSC,Adv. Ankit Sharma,LL.B,9111111111,advocate80@gmail.com,01 April 2023,31 March 2026,Male,13,Criminal Law,2800,4.5,"Marathi, Hindi, English","Mumbai, Maharashtra",Session Court
+82,Pune,TLSC,Adv. Dipika Patel,B.A.LL.B,9111111111,advocate81@gmail.com,01 April 2023,31 March 2026,Female,16,Civil Law,3800,4.9,"Hindi, English","Pune, Maharashtra",Consumer Court
+83,Nagpur,TLSC,Adv. Ramesh Kumar,B.Com LL.B,9111111111,advocate82@gmail.com,01 April 2023,31 March 2026,Male,20,Family Law,3300,4.7,"Marathi, Hindi","Nagpur, Maharashtra",Family Court
+84,Thane,TLSC,Adv. Jyoti Desai,LL.M,9111111111,advocate83@gmail.com,01 April 2023,31 March 2026,Female,11,Corporate Law,4800,4.7,"English, Hindi","Thane, Maharashtra",Labour Court
+85,Nashik,TLSC,Adv. Rahul Verma,B.S.L.LL.B,9111111111,advocate84@gmail.com,01 April 2023,31 March 2026,Male,23,Property Law,2300,4.6,"Marathi, English","Nashik, Maharashtra",District Court
+86,Mumbai,TLSC,Adv. Sarika Singh,LL.B,9111111111,advocate85@gmail.com,01 April 2023,31 March 2026,Female,15,Labour Law,4300,4.9,Hindi,"Aurangabad, Maharashtra",High Court
+87,Pune,TLSC,Adv. Vikas Mehta,B.A.LL.B,9111111111,advocate86@gmail.com,01 April 2023,31 March 2026,Male,18,Tax Law,2600,4.8,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",Session Court
+88,Nagpur,TLSC,Adv. Anamika Joshi,B.Com LL.B,9111111111,advocate87@gmail.com,01 April 2023,31 March 2026,Female,14,Cyber Law,3600,4.6,English,"Amravati, Maharashtra",Consumer Court
+89,Thane,TLSC,Adv. Vijay Gupta,LL.M,9111111111,advocate88@gmail.com,01 April 2023,31 March 2026,Male,17,Intellectual Property,4000,4.5,"Marathi, Hindi, English","Kolhapur, Maharashtra",Family Court
+90,Nashik,TLSC,Adv. Sonia Reddy,B.S.L.LL.B,9111111111,advocate89@gmail.com,01 April 2023,31 March 2026,Female,12,Constitutional Law,3000,4.8,"Hindi, English","Sangli, Maharashtra",Labour Court
+91,Mumbai,TLSC,Adv. Nilesh Sharma,LL.B,9111111111,advocate90@gmail.com,01 April 2023,31 March 2026,Male,14,Criminal Law,2900,4.6,"Marathi, Hindi, English","Mumbai, Maharashtra",District Court
+92,Pune,TLSC,Adv. Monika Patel,B.A.LL.B,9111111111,advocate91@gmail.com,01 April 2023,31 March 2026,Female,17,Civil Law,3900,4.5,"Hindi, English","Pune, Maharashtra",High Court
+93,Nagpur,TLSC,Adv. Girish Kumar,B.Com LL.B,9111111111,advocate92@gmail.com,01 April 2023,31 March 2026,Male,21,Family Law,3400,4.8,"Marathi, Hindi","Nagpur, Maharashtra",Session Court
+94,Thane,TLSC,Adv. Swati Desai,LL.M,9111111111,advocate93@gmail.com,01 April 2023,31 March 2026,Female,12,Corporate Law,4900,4.8,"English, Hindi","Thane, Maharashtra",Consumer Court
+95,Nashik,TLSC,Adv. Pradeep Verma,B.S.L.LL.B,9111111111,advocate94@gmail.com,01 April 2023,31 March 2026,Male,24,Property Law,2400,4.7,"Marathi, English","Nashik, Maharashtra",Family Court
+96,Mumbai,TLSC,Adv. Nandini Singh,LL.B,9111111111,advocate95@gmail.com,01 April 2023,31 March 2026,Female,16,Labour Law,4400,4.5,Hindi,"Aurangabad, Maharashtra",Labour Court
+97,Pune,TLSC,Adv. Rohan Mehta,B.A.LL.B,9111111111,advocate96@gmail.com,01 April 2023,31 March 2026,Male,19,Tax Law,2700,4.9,"Marathi, Hindi, English, Gujarati","Solapur, Maharashtra",District Court
+98,Nagpur,TLSC,Adv. Tanya Joshi,B.Com LL.B,9111111111,advocate97@gmail.com,01 April 2023,31 March 2026,Female,15,Cyber Law,3700,4.7,English,"Amravati, Maharashtra",District Court
+99,Thane,TLSC,Adv. Amar Gupta,LL.M,9111111111,advocate98@gmail.com,01 April 2023,31 March 2026,Male,18,Intellectual Property,4100,4.6,"Marathi, Hindi, English","Kolhapur, Maharashtra",District Court
+100,Nashik,TLSC,Adv. Kiran Reddy,B.S.L.LL.B,9111111111,advocate99@gmail.com,01 April 2023,31 March 2026,Female,13,Constitutional Law,3100,4.9,"Hindi, English","Sangli, Maharashtra",District Court

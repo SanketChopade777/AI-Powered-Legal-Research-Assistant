@@ -5,7 +5,7 @@ def show_home_page():
     """Show the main navigation page"""
     st.markdown("""
     <div class="main-header">
-        <div class="main-title">⚖️ LegalEase AI</div>
+        <div class="main-title">⚖️ AI Legal Assistant</div>
         <div class="main-subtitle">Your comprehensive legal assistance platform powered by artificial intelligence</div>
     </div>
     """, unsafe_allow_html=True)
@@ -14,6 +14,21 @@ def show_home_page():
     col1, col2, col3 = st.columns(3)
 
     with col1:
+        st.markdown("""
+                <div class="nav-card">
+                    <div class="nav-icon">🤖</div>
+                    <div class="nav-title">Legal Chatbot</div>
+                    <div class="nav-description">
+                        Chat with our AI legal assistant trained on comprehensive legal knowledge. 
+                        Get answers to your legal questions instantly.
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+
+        if st.button("Start Chatting", key="chat_btn", use_container_width=True):
+            run_external_app('legal_chatbot.py')
+
+    with col2:
         st.markdown("""
         <div class="nav-card">
             <div class="nav-icon">📄</div>
@@ -28,21 +43,6 @@ def show_home_page():
         # Button below the card
         if st.button("Analyze Documents", key="doc_btn", use_container_width=True):
             run_external_app('document_upload.py')
-
-    with col2:
-        st.markdown("""
-        <div class="nav-card">
-            <div class="nav-icon">🤖</div>
-            <div class="nav-title">Legal Chatbot</div>
-            <div class="nav-description">
-                Chat with our AI legal assistant trained on comprehensive legal knowledge. 
-                Get answers to your legal questions instantly.
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
-
-        if st.button("Start Chatting", key="chat_btn", use_container_width=True):
-            run_external_app('legal_chatbot.py')
 
     with col3:
         st.markdown("""
@@ -71,20 +71,20 @@ def show_home_page():
 
     with features_col1:
         st.markdown("""
-           <div class="feature-card">
-               <h3 style="color: #f72585; margin-bottom: 15px;">📝 Document Analysis</h3>
-               <p style="color: #e0e0ff; line-height: 1.6;">
-                   Upload contracts, agreements, or legal documents for instant AI-powered analysis and insights.
-               </p>
-           </div>
-           """, unsafe_allow_html=True)
+                   <div class="feature-card">
+                       <h3 style="color: #f72585; margin-bottom: 15px;">💬 Smart Chat</h3>
+                       <p style="color: #e0e0ff; line-height: 1.6;">
+                           Get answers to complex legal questions from our trained AI assistant.
+                       </p>
+                   </div>
+                   """, unsafe_allow_html=True)
 
     with features_col2:
         st.markdown("""
            <div class="feature-card">
-               <h3 style="color: #f72585; margin-bottom: 15px;">💬 Smart Chat</h3>
+               <h3 style="color: #f72585; margin-bottom: 15px;">📝 Document Analysis</h3>
                <p style="color: #e0e0ff; line-height: 1.6;">
-                   Get answers to complex legal questions from our trained AI assistant.
+                   Upload contracts, agreements, or legal documents for instant AI-powered analysis and insights.
                </p>
            </div>
            """, unsafe_allow_html=True)
@@ -128,7 +128,7 @@ def show_home_page():
     with stats_col3:
         st.markdown("""
             <div style="text-align: center; padding: 20px;">
-                <div style="font-size: 3rem; color: #4cc9f0; font-weight: bold;">5+</div>
+                <div style="font-size: 3rem; color: #4cc9f0; font-weight: bold;">100+</div>
                 <div style="color: #a8b2d1; font-size: 1.1rem;">Verified Lawyers</div>
             </div>
             """, unsafe_allow_html=True)
@@ -144,7 +144,7 @@ def show_home_page():
     # Footer
     st.markdown("""
     <div class="footer">
-        <p>⚖️ LegalEase AI v2.0 | Built with Streamlit & Advanced AI Technologies</p>
+        <p>⚖️ AI Legal Assistant v2.0 | Built with Streamlit & Advanced AI Technologies</p>
         <p>🔒 Your data is secure and confidential</p>
     </div>
     """, unsafe_allow_html=True)
