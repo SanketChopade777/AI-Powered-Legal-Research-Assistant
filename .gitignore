@@ -1,4 +1,6 @@
 .env
 config.json
 
+user_uploads
+
 utils/config.json
